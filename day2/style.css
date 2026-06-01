@@ -1,0 +1,256 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100%;
+    overflow-x:hidden;
+
+    -webkit-tap-highlight-color:transparent;
+}
+
+body{
+
+    background:
+    linear-gradient(
+    180deg,
+    #07111f,
+    #162447
+    );
+
+    color:white;
+
+    font-family:
+    Arial,
+    sans-serif;
+}
+
+.stars{
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:
+    radial-gradient(
+    white 1px,
+    transparent 1px
+    );
+
+    background-size:
+    40px 40px;
+
+    opacity:.25;
+
+    pointer-events:none;
+
+    z-index:0;
+}
+
+.container{
+
+    position:relative;
+
+    z-index:1;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+}
+
+.screen{
+
+    display:none;
+
+    width:100%;
+
+    max-width:650px;
+}
+
+.screen.active{
+
+    display:block;
+
+    animation:
+    fadeIn .8s ease;
+}
+
+h1,
+h2{
+
+    margin-bottom:20px;
+
+    font-size:
+    clamp(
+    1.8rem,
+    5vw,
+    2.8rem
+    );
+}
+
+.intro,
+.tap-text,
+.tomorrow{
+
+    font-size:
+    clamp(
+    1rem,
+    3vw,
+    1.2rem
+    );
+
+    line-height:1.8;
+}
+
+button{
+
+    margin-top:30px;
+
+    padding:
+    18px 45px;
+
+    border:none;
+
+    border-radius:999px;
+
+    font-size:1.1rem;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    background:white;
+
+    color:#111;
+
+    touch-action:manipulation;
+
+    min-width:220px;
+}
+
+button:active{
+
+    transform:
+    scale(.97);
+}
+
+.envelope{
+
+    font-size:
+    clamp(
+    90px,
+    22vw,
+    130px
+    );
+
+    cursor:pointer;
+
+    user-select:none;
+
+    touch-action:
+    manipulation;
+
+    animation:
+    float 2s
+    ease-in-out
+    infinite;
+}
+
+.message{
+
+    background:
+    rgba(
+    255,
+    255,
+    255,
+    .10
+    );
+
+    padding:25px;
+
+    border-radius:20px;
+
+    line-height:1.8;
+}
+
+.special{
+
+    color:#ffd86b;
+
+    margin:
+    15px 0;
+
+    font-size:
+    clamp(
+    1.2rem,
+    4vw,
+    1.5rem
+    );
+}
+
+#countdown{
+
+    margin-top:25px;
+
+    font-size:
+    1.4rem;
+
+    font-weight:bold;
+}
+
+.secret{
+
+    margin-top:35px;
+
+    font-size:
+    1.2rem;
+}
+
+@keyframes float{
+
+    0%{
+        transform:
+        translateY(0);
+    }
+
+    50%{
+        transform:
+        translateY(-15px);
+    }
+
+    100%{
+        transform:
+        translateY(0);
+    }
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(20px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+    }
+}
