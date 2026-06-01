@@ -1,0 +1,184 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+    background:linear-gradient(
+        180deg,
+        #0b1026,
+        #182848
+    );
+    color:white;
+    font-family:Arial, sans-serif;
+}
+
+.stars{
+    position:fixed;
+    inset:0;
+
+    background-image:
+        radial-gradient(white 1px, transparent 1px);
+
+    background-size:40px 40px;
+
+    opacity:.3;
+
+    pointer-events:none;
+
+    z-index:0;
+}
+
+.container{
+    position:relative;
+    z-index:1;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    padding:20px;
+}
+
+.screen{
+    display:none;
+    width:100%;
+    max-width:650px;
+}
+
+.screen.active{
+    display:block;
+    animation:fadeIn .8s ease;
+}
+
+h1{
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+h2{
+    margin-bottom:20px;
+}
+
+p{
+    line-height:1.8;
+}
+
+button{
+    margin-top:30px;
+
+    padding:16px 40px;
+
+    border:none;
+    border-radius:999px;
+
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    background:white;
+    color:#111;
+
+    position:relative;
+    z-index:999;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:active{
+    transform:scale(.97);
+}
+
+.star{
+    font-size:90px;
+    cursor:pointer;
+    user-select:none;
+
+    animation:pulse 1.5s infinite;
+}
+
+.message{
+    background:rgba(255,255,255,.1);
+
+    padding:25px;
+
+    border-radius:20px;
+
+    margin-top:20px;
+}
+
+.special{
+    margin-top:15px;
+
+    color:#ffd86b;
+
+    font-size:1.3rem;
+}
+
+#countdown{
+    margin-top:25px;
+
+    font-size:1.4rem;
+
+    font-weight:bold;
+}
+
+.tomorrow{
+    margin-top:20px;
+}
+
+.secret{
+    margin-top:30px;
+    font-size:1.2rem;
+}
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.2);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:600px){
+
+    h1{
+        font-size:1.6rem;
+    }
+
+    .star{
+        font-size:75px;
+    }
+
+    button{
+        width:80%;
+        max-width:250px;
+    }
+}
