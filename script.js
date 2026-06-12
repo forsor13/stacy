@@ -298,7 +298,7 @@ Just be my girlfriend and my everything for the rest of our lives!`;
     if (i < text.length) {
       p.innerHTML += text[i] === "\n" ? "<br>" : text[i];
       i++;
-      setTimeout(type, 180);
+      setTimeout(type, 200);
     } else {
       setTimeout(showLovePage, 60000);
     }
